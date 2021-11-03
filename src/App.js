@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import { Tree } from './components/tree';
+import { treeData } from './data';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+    <div className="app">
+      <div className="col text-center">
+        <h2>Tree Visualization component</h2>
+        <p className="mt-3">
+          <div className="row mt-3 d-flex justify-content-center">
+            <div className="col-lg-8 text-left text-dark">
+              <Tree data={treeData} />
+            </div>
+          </div>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </div>
     </div>
   );
 }
